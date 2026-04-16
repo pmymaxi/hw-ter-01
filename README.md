@@ -8,7 +8,7 @@ STDOUT terraform --version
 2. По описанью файла” .gitignor” , установлено исключение файла personal.auto.tfvars при git push.
 3. Результат state-файла созданного ресурсом **random_password**: "result": "5Y8DYnFPquCCm6rk"
 4. Намеренные ошибки, допущенные в фале **main.tf**:
-    - resource "docker_image" имеет type но не имеет lables ("type" "name"), исправлено на "docker_image" "nginx"
+    - resource "docker_image" имеет type но не имеет lables ("type" "name"), исправлено на "docker_image" "nginx", в коде есть обращение к данному ресурсу.
     - resource "docker_container" "1nginx" Имя должно начинаться с буквы или символа подчеркивания и может содержать только буквы, цифры, знаки подчеркивания и тире. 
       resource "docker_container" "nginx"
     - name  = "example_${random_password.random_string_FAKE.resulT}" resulT -> result, random_string_FAKE -> random_string просто такого lables нет на ресурсе
