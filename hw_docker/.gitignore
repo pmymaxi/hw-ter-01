@@ -23,3 +23,6 @@ terraform.rc
 # key
 passwd.key
 public.key
+
+# git
+.gitignore
