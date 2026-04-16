@@ -2,7 +2,8 @@
 
 STDOUT terraform --version
 
-<img width="1102" height="205" alt="1" src="https://github.com/user-attachments/assets/17739c32-0271-455c-8d14-98196cb3980a" />
+<img width="915" height="192" alt="изображение" src="https://github.com/user-attachments/assets/bad00ef5-e681-4b71-bd65-4c20f8ed97e6" />
+
 
 ## Задание 1
 2. По описанью файла” .gitignor” , установлено исключение файла personal.auto.tfvars при git push.
