@@ -1,0 +1,37 @@
+# Yandex Cloud configure placement VM
+folder_id = ""
+zone_id   = ""
+cloud_id  = ""
+
+# VM Configure (resource "yandex_compute_instance")
+family_image      = "ubuntu-2404-lts"                  # name family_image distributive
+name_vm           = "hw-ter-01"                        # name VM in YC console
+hostname          = "hw-ter-01"                        # hostname in VM host
+description_vm    = "test vm for home works terraform" # description VM
+cores_vm          = 2                                  # count cores cpu
+cpu_platform      = "standard-v3"                      # name cpu platform (Intel Broadwell/Intel Ice Lake/AMD Zen 3 ...)
+core_fraction     = 20                                 # % use cpu
+memory            = 2                                  # count memory in GB
+scheduling_policy = true                               # shutdown VM
+disk_size         = 20                                 # count disk size in GB
+disk_type         = "network-hdd"                      # type disk
+username_vm       = "<username>"                       # create user in system
+add_user_group    = "<user groups>"                    # add user in groups system
+
+# Network configure for VM (resource "yandex_compute_instance")
+subnet_id = ""
+nat       = true
+
+# Docker container configure (resource "docker_image")
+name_image     = "mysql:8"
+name_container = "hw-ter-mysql-01"
+ports_in       = 3306
+ports_ext      = 3306
+ext_ip         = "127.0.0.1"
+MYSQL_DATABASE = "<name databases>"
+MYSQL_USER     = "<name user>"
+MYSQL_ROOT_HOST = "%"
+
+# SSH key
+ssh_key_dir = "~/.ssh/<file key>"  # absolute path to ssh.key
+

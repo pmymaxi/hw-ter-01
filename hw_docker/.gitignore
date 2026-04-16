@@ -1,0 +1,25 @@
+# Terraform cache
+.terraform/
+
+# Lock file (НЕ игнорим!)
+# .terraform.lock.hcl ← оставить в репозитории
+
+# State
+*.tfstate
+*.tfstate.*
+
+# Sensitive vars
+*.tfvars
+*.tfvars.json
+
+# Plan files
+*.tfplan
+tfplan
+
+# CLI config
+#.terraformrc
+terraform.rc
+
+# key
+passwd.key
+public.key

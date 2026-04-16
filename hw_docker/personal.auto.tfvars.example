@@ -1,0 +1,13 @@
+# Docker container configure (resource "docker_image")
+name_image     = "mysql:8"
+name_container = "hw-ter-mysql-01"
+ports_in       = 3306
+ports_ext      = 3306
+ext_ip         = "127.0.0.1"
+MYSQL_DATABASE = "<name_databases>"
+MYSQL_USER     = "<name_user>"
+MYSQL_ROOT_HOST = "%"
+
+# SSH key
+ssh_key_dir = "~/.ssh/<name file key>"  # absolute path to ssh.key
+
